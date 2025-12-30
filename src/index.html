@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang ="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body{font-family: sans-serif; background-color: #f4f4f4; padding: 20px;}
+        .dashboard{display: flex; gap: 20px; flex-wrap: wrap;}
+
+        .card {background-color: white; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+        .card h3 {margin-top: 0; color: #555;}
+
+        .numero-grande{font-size:2em; font-weight: bold; color: #333;}
+
+        .ok {border-top: 5px solid #2ecc71;}
+        .alerta {border-top:  5px solid #e74c3c;}
+
+        ul{list-style: none; padding: 0;}
+        li{padding: 5px 0; border-radius: 1px solid #eee;}
+
+        .color-ok {color:#2ecc71; margin-right: 8px;}
+        .color-error{color: #e74c3c; margin-right: 8px;}
+
+
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <h1>Panel de Control(Ajax)</h1>
+
+    <p>Servidor: <strong id="hostname">Cargando...</strong></p> | Uptime: <span id="uptime">--</span></body></p>
+
+    <div class="dashboard">
+
+        <div class="card ok" id="card-cpu">
+            <h3>Carga CPU</h3>
+            <div class="numero-grande" id="cpu-load">--</div>
+            <p>Promedio 1 min</p>
+        </div>
+
+        <div class="card-ok" id="card-ram">
+            <h3>Memoria RAM</h3>
+            <div class="numero-grande"><span id="ram-usada">--</span>MB</div>
+            <p>De <span id="ram-total">--</span>MB Totales</p>
+        </div>
+
+        <div class="card-ok" id="card-disco">
+            <h3>Disco (Raíz)</h3>
+            <div class="numero-grande"><span id="disk-usage">--</span>%</div>
+            <p>Ocupado</p>
+        </div>
+
+        <div class="card">
+            <h3>Servicios</h3>
+            <ul id="lista-servicios"><li>Cargando listas...</li></ul>
+            </div>
+        </div>
+
+
+        <script src="app.js">
+
+        </script>
+
+ 
+
+
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
